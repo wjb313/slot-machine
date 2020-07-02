@@ -1,0 +1,16 @@
+{
+  "name": "guessing-game",
+  "author": "William Bryson <wjbryson@gmail.com> (https://wjbryson.com)",
+  "version": "1.0.0",
+  "description": "This is a random number guessing game project for practicing various html, css, and js skills",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "lite-server"
+  },
+  "keywords": [],
+  "license": "The Unlicense",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
