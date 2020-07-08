@@ -16,13 +16,494 @@
 /* Define standard HTML element settings */
 html {
   font-size: 62.5%; /* Sets font size for document at 10px */
-  background-color: white; /* Sets all background to white */
+  background-color: rgb(216, 216, 216); /*Sets all background to white */
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1rem; /* Sets font size of body equivalent to 10px based on html element formatting */
+  text-align: center;
 }
 
+header {
+  text-align: center;
+}
+
+h1 {
+  color: #8fd400;
+  text-shadow: 5px 5px 2px rgb(94, 102, 85);
+  -webkit-text-stroke: 2px rgb(89, 89, 247);
+  font-size: 5rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 12rem;
+  color: rgb(206, 1, 1);
+  text-shadow: 4px 4px 5px rgb(27, 68, 43);
+  padding: 10px;
+  line-height: 145px;
+}
+
+h3 {
+  font-size: 6rem;
+  color: rgb(206, 1, 1);
+  text-shadow: 2px 2px 1px rgb(27, 68, 43);
+  padding: 10px;
+  line-height: 145px;
+}
+
+h4 {
+  font-size: 4rem;
+  color: whitesmoke;
+  -webkit-text-stroke: 1.5px black;
+  margin-bottom: 5px;
+  animation: billions 3s ease-out infinite;
+}
+
+button {
+  margin: 20px;
+  width: 150px;
+  height: 75px;
+  font-size: 2rem;
+  background-color: whitesmoke;
+  border: 10px ridge gold;
+  border-radius: 10px;
+}
 /* Define content in order of appearance */
+.rollerView {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+.gameStart {
+  position: absolute;
+  top: 135px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.rollerViewWin {
+  display: flex;
+  justify-content: center;
+  animation: winner ease-in-out 2s;
+}
+
+.winnerWord {
+  display: none;
+  font-size: 20rem;
+
+  color: white;
+  -webkit-text-stroke: 3px red;
+  position: relative;
+  top: -375px;
+  animation: winnerWord 2s;
+}
+
+.rollers {
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+  background-color: whitesmoke;
+  border: 15px ridge gold;
+}
+
+/* .slot1 {
+  display: none;
+}
+
+.slot2 {
+  display: none;
+}
+
+.slot3 {
+  display: none;
+} */
+
+/* Define @keyframes animations*/
+
+@keyframes billions {
+  0% {
+    color: whitesmoke;
+  }
+  50% {
+    color: gold;
+  }
+  100% {
+    color: whitesmoke;
+  }
+}
+
+@keyframes winner {
+  0% {
+    transform: scale(1);
+    background-color: white;
+  }
+  5% {
+    transform: scale(1.75);
+    background-color: red;
+  }
+  10% {
+    transform: scale(1);
+    background-color: white;
+  }
+  15% {
+    transform: scale(1.75);
+    background-color: red;
+  }
+  20% {
+    transform: scale(1);
+    background-color: white;
+  }
+  25% {
+    transform: scale(1.75);
+    background-color: red;
+  }
+  30% {
+    transform: scale(1);
+    background-color: white;
+  }
+  35% {
+    transform: scale(1.75);
+    background-color: red;
+  }
+  40% {
+    transform: scale(1);
+    background-color: white;
+  }
+  45% {
+    transform: scale(1.75);
+    background-color: red;
+  }
+  50% {
+    transform: scale(1);
+    background-color: white;
+  }
+  55% {
+    transform: scale(1.75);
+    background-color: red;
+  }
+  60% {
+    transform: scale(1);
+    background-color: white;
+  }
+  65% {
+    transform: scale(1.75);
+    background-color: red;
+  }
+  70% {
+    transform: scale(1);
+    background-color: white;
+  }
+  75% {
+    transform: scale(1.75);
+    background-color: red;
+  }
+  80% {
+    transform: scale(1);
+    background-color: white;
+  }
+  85% {
+    transform: scale(1.75);
+    background-color: red;
+  }
+  90% {
+    transform: scale(1);
+    background-color: white;
+  }
+  95% {
+    transform: scale(1.75);
+    background-color: red;
+  }
+  100% {
+    transform: scale(1);
+    background-color: white;
+  }
+}
+
+@keyframes winnerWord {
+  0% {
+    scale: 1;
+    color: white;
+    -webkit-text-stroke: 3px red;
+  }
+  5% {
+    color: red;
+    -webkit-text-stroke: 3px white;
+  }
+  10% {
+    color: white;
+    -webkit-text-stroke: 3px red;
+  }
+  15% {
+    color: red;
+    -webkit-text-stroke: 3px white;
+  }
+  20% {
+    color: white;
+    -webkit-text-stroke: 3px red;
+  }
+  25% {
+    scale: 1.5;
+    color: red;
+    -webkit-text-stroke: 3px white;
+  }
+  30% {
+    color: white;
+    -webkit-text-stroke: 3px red;
+  }
+  35% {
+    color: red;
+    -webkit-text-stroke: 3px white;
+  }
+  40% {
+    color: white;
+    -webkit-text-stroke: 3px red;
+  }
+  45% {
+    color: red;
+    -webkit-text-stroke: 3px white;
+  }
+  50% {
+    scale: 1;
+    color: white;
+    -webkit-text-stroke: 3px red;
+  }
+  55% {
+    color: red;
+    -webkit-text-stroke: 3px white;
+  }
+  60% {
+    color: white;
+    -webkit-text-stroke: 3px red;
+  }
+  65% {
+    color: red;
+    -webkit-text-stroke: 3px white;
+  }
+  70% {
+    color: white;
+    -webkit-text-stroke: 3px red;
+  }
+  75% {
+    scale: 1.5;
+    color: red;
+    -webkit-text-stroke: 3px white;
+  }
+  80% {
+    color: white;
+    -webkit-text-stroke: 3px red;
+  }
+  85% {
+    color: red;
+    -webkit-text-stroke: 3px white;
+  }
+  90% {
+    color: white;
+    -webkit-text-stroke: 3px red;
+  }
+  95% {
+    color: red;
+    -webkit-text-stroke: 3px white;
+  }
+  100% {
+    scale: 1;
+    color: white;
+    -webkit-text-stroke: 3px red;
+  }
+}
+
+/* @keyframes winnerWord {
+  0% {
+    transform: scale(1);
+    background-color: white;
+  }
+  5% {
+    transform: scale(1.75);
+    background-color: red;
+  }
+  10% {
+    transform: scale(1);
+    background-color: white;
+  }
+  15% {
+    transform: scale(1.75);
+    background-color: red;
+  }
+  20% {
+    transform: scale(1);
+    background-color: white;
+  }
+  25% {
+    transform: scale(1.75);
+    background-color: red;
+  }
+  30% {
+    transform: scale(1);
+    background-color: white;
+  }
+  35% {
+    transform: scale(1.75);
+    background-color: red;
+  }
+  40% {
+    transform: scale(1);
+    background-color: white;
+  }
+  45% {
+    transform: scale(1.75);
+    background-color: red;
+  }
+  50% {
+    transform: scale(1);
+    background-color: white;
+  }
+  55% {
+    transform: scale(1.75);
+    background-color: red;
+  }
+  60% {
+    transform: scale(1);
+    background-color: white;
+  }
+  65% {
+    transform: scale(1.75);
+    background-color: red;
+  }
+  70% {
+    transform: scale(1);
+    background-color: white;
+  }
+  75% {
+    transform: scale(1.75);
+    background-color: red;
+  }
+  80% {
+    transform: scale(1);
+    background-color: white;
+  }
+  85% {
+    transform: scale(1.75);
+    background-color: red;
+  }
+  90% {
+    transform: scale(1);
+    background-color: white;
+  }
+  95% {
+    transform: scale(1.75);
+    background-color: red;
+  }
+  100% {
+    transform: scale(1);
+    background-color: white;
+  }
+} */
+/* #no11 {
+  display: none;
+}
+
+#no12 {
+  display: none;
+}
+
+#no13 {
+  display: none;
+}
+
+#no14 {
+  display: none;
+}
+
+#no15 {
+  display: none;
+}
+
+#no16 {
+  display: none;
+}
+
+#no17 {
+  display: none;
+}
+
+#no18 {
+  display: none;
+}
+
+#no19 {
+  display: none;
+}
+
+#no21 {
+  display: none;
+}
+
+#no22 {
+  display: none;
+}
+
+#no23 {
+  display: none;
+}
+
+#no24 {
+  display: none;
+}
+
+#no25 {
+  display: none;
+}
+
+#no26 {
+  display: none;
+}
+
+#no27 {
+  display: none;
+}
+
+#no28 {
+  display: none;
+}
+
+#no29 {
+  display: none;
+}
+
+#no31 {
+  display: none;
+}
+
+#no32 {
+  display: none;
+}
+
+#no33 {
+  display: none;
+}
+
+#no34 {
+  display: none;
+}
+
+#no35 {
+  display: none;
+}
+
+#no36 {
+  display: none;
+}
+
+#no37 {
+  display: none;
+}
+
+#no38 {
+  display: none;
+}
+
+#no39 {
+  display: none;
+}*/

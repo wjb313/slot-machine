@@ -1,8 +1,8 @@
 {
-  "name": "guessing-game",
+  "name": "slot-machine",
   "author": "William Bryson <wjbryson@gmail.com> (https://wjbryson.com)",
   "version": "1.0.0",
-  "description": "This is a random number guessing game project for practicing various html, css, and js skills",
+  "description": "This is a slot machine project for practicing various html, css, and js skills",
   "main": "index.js",
   "private": true,
   "scripts": {
@@ -12,5 +12,9 @@
   "license": "The Unlicense",
   "devDependencies": {
     "lite-server": "^2.5.4"
+  },
+  "dependencies": {
+    "http-proxy": "^1.18.1",
+    "yargs-parser": "^18.1.3"
   }
 }
